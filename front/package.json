@@ -1,0 +1,14 @@
+{
+  "name": "spa-aws-sample-front",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "author": "Yutaka Omido",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "nuxt": "^2.2.0"
+  }
+}

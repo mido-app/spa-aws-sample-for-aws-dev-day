@@ -1,0 +1,13 @@
+{
+  "name": "spa-aws-sample-back",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "author": "Yutaka Omido",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

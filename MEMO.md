@@ -1,7 +1,7 @@
 # 個人メモ
 Cognitoによる認証フローを作るために必要な知識をまとめていく
 
-## Cognitoによる認証フロー
+## Cognitoによる認証フローまとめ
 ### SPA ⇄ APIサーバの構成の場合
 #### 初回アクセス
 1. SPAはCognitoにユーザID・パスワードを使ってID/Password認証を行う（InitiateAuth API）。この時認証フローとして「USER_SRP_AUTH」（★1）を指定
@@ -29,5 +29,9 @@ Cognitoによる認証フローを作るために必要な知識をまとめて�
 3. 3種類のトークンの用途の違いは？
 4. API呼び出し時に送るトークンは3種類のうちどれ？
 
+## JavaScriptによる実装手順
+### 
+
 ## 参考にした資料・サイト
 [AWS Black Belt Online Seminar 2017 AWSにおけるアプリ認証パターンのご紹介](https://www.slideshare.net/AmazonWebServicesJapan/aws-black-belt-online-seminar-2017-aws-80642202)
+[Amazon Cognito と仲良くなるために歴史と機能を整理したし、 Cognito User Pools と API Gateway の連携も試した](https://dev.classmethod.jp/server-side/serverless/amazon-cognito-api-gateway-idtoken/)
