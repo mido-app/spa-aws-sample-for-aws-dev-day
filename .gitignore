@@ -4,3 +4,6 @@
 # nuxt
 /**/dist/
 /**/.nuxt/
+
+# environment variables
+.env
