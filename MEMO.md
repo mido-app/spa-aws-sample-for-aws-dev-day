@@ -1,6 +1,14 @@
 # 個人メモ
 Cognitoによる認証フローを作るために必要な知識をまとめていく
 
+## Cognito
+### 3種類のアクセストークンの用途
+|トークン名	| 種類 | 想定用途|
+| --- | --- | --- |
+| IDトークン | JWT | Cognito User Pools の ユーザー属性（例えばメールアドレスなど）も含めたトークン。認可時、ユーザーに関する情報をフルで取得したい場合はこちらを使う。API Gateway はこちらを採用。 |
+| アクセストークン | JWT | Cognito User Pools の 最低限のユーザー情報を含めたトークン。認可時、必要なのがユーザー名程度であればこちらを採用する。 |
+| リフレッシュトークン | 文字列 |	IDトークンおよびアクセストークンを更新するために利用する。Cognito User Pools のクライアントSDKを利用している場合は、自動で更新されるため、特にこのトークンをアプリケーションから意識して使うことはない。 |
+
 ## Cognitoによる認証フローまとめ
 ### SPA ⇄ APIサーバの構成の場合
 #### 初回アクセス
@@ -30,7 +38,10 @@ Cognitoによる認証フローを作るために必要な知識をまとめて�
 4. API呼び出し時に送るトークンは3種類のうちどれ？
 
 ## JavaScriptによる実装手順
-### 
+### AWS Amplifyをインストール
+[公式ドキュメント](https://aws-amplify.github.io/docs/js/start)に従って導入。
+AWS AmplifyとAWS SDKがあるけどAPIの違いだけでできることは同じ。
+AWS AmplifyはAWS SDKのAPIをよりわかりやすくしたもの（宣言的なAPI）だそう。
 
 ## 参考にした資料・サイト
 [AWS Black Belt Online Seminar 2017 AWSにおけるアプリ認証パターンのご紹介](https://www.slideshare.net/AmazonWebServicesJapan/aws-black-belt-online-seminar-2017-aws-80642202)
